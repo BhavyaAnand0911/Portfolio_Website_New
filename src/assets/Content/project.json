@@ -1,0 +1,22 @@
+[
+  {
+    "name": "NotFlix",
+    "text": "Developed a responsive Netﬂix clone using React JS and SASS, showcasing my proﬁciency in front-end web development and API integration. The project aimed to replicate the user interface and functionality of the popular streaming platform, Netﬂix, while also demonstrating my skills in creating modern, interactive web applications.",
+    "link": "https://github.com/BhavyaAnand0911/Netflix_Clone"
+  },
+  {
+    "name": "WeatherBug",
+    "text": "Developed a dynamic weather forecasting full-stack website, utilizing HTML, CSS, and JavaScript for the intuitive front end. The website seamlessly integrates the OpenWeather API for real-time weather data accuracy. Enhanced user engagement through Node.js and MongoDB for secure authentication, allowing personalization and history storage",
+    "link": "https://github.com/BhavyaAnand0911/WeatherBug"
+  },
+  {
+    "name": "CHAT!",
+    "text": "Developed a responsive Chat App using React JS, Chakra UI, and Firebase. This project is a testament to my expertise in crafting real-time, interactive web applications with a keen focus on user experience and data security. Leveraging React for the front end and Firebase for real- time messaging and authentication.",
+    "link": "https://github.com/BhavyaAnand0911/ChatApp"
+  },
+  {
+    "name": "PortFolio",
+    "text": "Conceptualized and built a dynamic web project, a sophisticated portfolio manager designed for stock enthusiasts. Combining HTML, CSS, and JavaScript, along with Node.js and React.js, Crafted an interactive platform. Users can seamlessly view, add, and track stocks within their portfolio, while real-time market monitoring provides instant updates.",
+    "link": "https://github.com/BhavyaAnand0911/Portfolio-Managment"
+  }
+]
