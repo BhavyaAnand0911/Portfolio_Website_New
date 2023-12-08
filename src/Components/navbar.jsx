@@ -9,7 +9,6 @@ const NavLinks = () => {
       <NavLink className="m-10 text-purpleCustom" to="/">
         HOME
       </NavLink>
-
       <NavLink className="m-8 hover:text-purpleCustom" to="/projects">
         PROJECTS
       </NavLink>

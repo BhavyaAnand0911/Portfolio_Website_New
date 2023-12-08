@@ -2,13 +2,18 @@ import React from "react";
 import SKILL from "./skill.jsx";
 
 const About = () => {
+  const lineStyle = {
+    width: "80px",
+    "border-top": "5px solid #da38da",
+    "margin-bottom": "30px",
+  };
   return (
     <>
       <div className="about min-h-screen  bg-slate-700 w-full flex flex-col items-center leading-20 font-['Montserrat']">
-        <span className="mt-8 text-white text-3xl md:text-5xl lg:text-5xl xl:text-5xl font-semibold  mb-5 md:mb-10">
+        <span className="mt-20 text-white text-3xl md:text-5xl lg:text-5xl xl:text-5xl font-semibold  mb-5 md:mb-10">
           ABOUT ME
         </span>
-        <div className="line w-1/2 md:w-80 border-t-5 border-purpleCustom "></div>
+        <div style={lineStyle}></div>
         <p className="aboutPara text-white font-medium text-lg md:text-xl lg:text-xl xl:text-xl text-center mt-5 md:mt-10">
           You may learn more about me, what I do, and my current qualifications
           here, which are primarily related to technology and programming.
