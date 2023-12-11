@@ -19,35 +19,26 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceId = "service_4o5wq3e";
-
-    const emailData = {
-      service_id: serviceId,
-      user_id: "bhavyaanand0911@gmail.com",
-      template_params: {
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-      },
-    };
-
-    // Send the email
-    emailjs.sendForm(serviceId, "template_fkr105r", e.target, emailData).then(
-      (response) => {
-        console.log("Email sent successfully:", response);
-        // You can add code here to show a success message or redirect the user to a thank-you page.
-      },
-      (error) => {
-        console.error("Email sending failed:", error);
-      }
-    );
-
-    // Clear the form fields
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
+    emailjs
+      .sendForm(
+        "service_e8snhs3",
+        "template_fkr105r",
+        e.target,
+        "aZPlyXWGo2XuNSlKo"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setFormData({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   const lineStyle = {
