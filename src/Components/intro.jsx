@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import React from "react";
 import github from "../assets/github.png";
 import insta from "../assets/instagram.png";
@@ -74,7 +75,15 @@ const Intro = () => {
             className="mt-12 w-60 h-16 rounded-lg text-white text-lg md:text-xl lg:text-xl xl:text-xl font-semibold transition-transform hover:cursor-pointer hover:transform hover:-translate-y-2 duration-300 ease-in-out"
             style={{ backgroundColor: "#da38da" }}
           >
-            PROJECTS
+            <Link
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={40}
+              duration={600}
+            >
+              PROJECTS
+            </Link>
           </button>
         </div>
       </section>

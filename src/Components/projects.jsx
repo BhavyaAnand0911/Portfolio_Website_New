@@ -26,7 +26,7 @@ const projects = () => {
           PROJECTS
         </span>
         <div style={lineStyle}></div>
-        <p className="projectPara text-white font-medium text-lg md:text-xl lg:text-xl xl:text-xl text-center mt-5 mb-5 md:mt-10">
+        <p className="projectPara text-white p-4 font-medium text-base md:text-xl lg:text-xl xl:text-xl text-center mt-5 mb-5 md:mt-10">
           You may discover some of my individual projects here, each of which
           has connections to its own code base and deployed web sites.
         </p>

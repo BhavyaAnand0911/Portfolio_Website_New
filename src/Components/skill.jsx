@@ -1,4 +1,5 @@
 import React from "react";
+
 const cardStyle = {
   color: "black",
   minWidth: "100px",
@@ -25,7 +26,10 @@ const contentStyle = {
 const skill = (name) => {
   return (
     <>
-      <div className="card m-8" style={cardStyle}>
+      <div
+        className="card m-3 w-full md:w-[90px] h-[30px] md:m-8 "
+        style={cardStyle}
+      >
         <span className="cardContent" style={contentStyle}>
           {name.name}
         </span>

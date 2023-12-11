@@ -1,5 +1,6 @@
 import React from "react";
 import SKILL from "./skill.jsx";
+import { Link } from "react-scroll";
 
 const About = () => {
   const lineStyle = {
@@ -14,12 +15,12 @@ const About = () => {
           ABOUT ME
         </span>
         <div style={lineStyle}></div>
-        <p className="aboutPara text-white font-medium text-lg md:text-xl lg:text-xl xl:text-xl text-center mt-5 md:mt-10">
+        <p className="aboutPara m-3 text-white font-medium text-base md:text-xl lg:text-xl xl:text-xl text-center mt-5 md:mt-10">
           You may learn more about me, what I do, and my current qualifications
           here, which are primarily related to technology and programming.
         </p>
         <div className="aboutSection m-8 md:m-16 flex flex-col md:flex-row justify-center max-w-screen-xl mx-auto">
-          <div className="getToKnow text-left text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-semibold w-full md:w-1/2 text-purpleCustom mb-5 md:mb-0">
+          <div className="getToKnow md:text-left  p-5 text-center text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-semibold w-full md:w-1/2 text-purpleCustom mb-5 md:mb-0">
             Get to know me!
             <p className="getToKnowMePara leading-8 mt-5 md:mt-10 p-2 text-white text-lg md:text-1xl lg:text-1xl xl:text-1xl font-normal">
               Greetings! 👋 I'm a passionate Frontend Web Developer dedicated to
@@ -42,14 +43,23 @@ const About = () => {
               className="mt-5 md:mt-10 ml-1 w-full md:w-[14rem] h-[3.5rem] rounded-lg text-white text-lg md:text-xl lg:text-xl xl:text-xl font-semibold transition-transform hover:cursor-pointer hover:transform hover:-translate-y-2 duration-300 ease-in-out"
               style={{ backgroundColor: "#da38da" }}
             >
-              CONTACT ME
+              <Link
+                className="m-8 hover:text-purpleCustom hover:cursor-pointer"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={10}
+                duration={600}
+              >
+                CONTACT ME
+              </Link>
             </button>
           </div>
-          <div className="skill w-full md:w-1/2">
-            <div className="heading text-left ml-7 text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-semibold text-purpleCustom">
+          <div className="skill w-full text-center md:w-1/2">
+            <div className="heading   mb-4 text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-semibold text-purpleCustom">
               My Skills
             </div>
-            <p className="skills md:m-3 p-3 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  ">
+            <div className="skills md:m-3 mr-8 grid grid-cols-3  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  ">
               <SKILL name={"HTML"} />
               <SKILL name={"CSS"} />
               <SKILL name={"JAVASCRIPT"} />
@@ -63,7 +73,7 @@ const About = () => {
               <SKILL name={"SEO"} />
               <SKILL name={"SASS"} />
               <SKILL name={"SQL"} />
-            </p>
+            </div>
           </div>
         </div>
       </div>

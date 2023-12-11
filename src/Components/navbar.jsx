@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Logo from "../assets/logo.png";
@@ -6,29 +6,52 @@ import Logo from "../assets/logo.png";
 const NavLinks = () => {
   return (
     <div className="flex flex-col  items-center text-[1.1rem] font-semibold font-['Montserrat']  xl:block md:block md:text-[1.1rem] md:font-semibold md:font-['Montserrat'] mr-3">
-      <NavLink className="m-10 text-purpleCustom" to="/">
+      <Link className="m-10 text-purpleCustom" to="/">
         HOME
-      </NavLink>
-      <NavLink className="m-8 hover:text-purpleCustom" to="/projects">
+      </Link>
+      <Link
+        to="projects"
+        spy={true}
+        smooth={true}
+        offset={40}
+        duration={600}
+        className="m-8 hover:text-purpleCustom hover:cursor-pointer"
+      >
         PROJECTS
-      </NavLink>
-      <NavLink className="m-8 hover:text-purpleCustom" to="/about">
+      </Link>
+      <Link
+        className="m-8 hover:text-purpleCustom hover:cursor-pointer"
+        to="about"
+        spy={true}
+        smooth={true}
+        offset={40}
+        duration={600}
+      >
         ABOUT
-      </NavLink>
-      <NavLink className="m-8 hover:text-purpleCustom" to="/contact">
+      </Link>
+      <Link
+        className="m-8 hover:text-purpleCustom hover:cursor-pointer"
+        to="contact"
+        spy={true}
+        smooth={true}
+        offset={10}
+        duration={600}
+      >
         CONTACT
-      </NavLink>
+      </Link>
     </div>
   );
 };
 
 const LogoImg = () => {
   return (
-    <img
-      className="hover:cursor-pointer hidden md:block  ml-auto mr-auto mt-auto mb-auto   md:ml-7  h-12 rounded-full z-50 "
-      src={Logo}
-      alt="logo"
-    ></img>
+    <a href="/">
+      <img
+        className="hover:cursor-pointer md:block  ml-auto mr-auto mt-auto mb-auto   md:ml-7  h-12 rounded-full z-50 "
+        src={Logo}
+        alt="logo"
+      ></img>
+    </a>
   );
 };
 
@@ -41,15 +64,23 @@ const Navbar = () => {
   return (
     <>
       <div className=" bg-slate-700 top-0 mx-auto w-full flex md:items-center md:justify-between h-20 text-white">
-        <LogoImg />
+        <div className="photo hidden md:block">
+          <LogoImg />
+        </div>
         <div className="hidden md:block">
           <NavLinks />
         </div>
-        <div className=" md:hidden lg:hidden xl:hidden  m-auto text-white font-bold">
-          <button onClick={toggleMenu}>
-            {!isOpen && <Menu size={"40px"} />}
-          </button>
-          <button className="" onClick={toggleMenu}>
+        <div className=" w-full md:hidden lg:hidden xl:hidden   text-white font-bold ">
+          <div className="open flex flex-row justify-between items-center mt-4">
+            <div className="photo ml-3">{!isOpen && <LogoImg />}</div>
+            <button className="mr-4" onClick={toggleMenu}>
+              {!isOpen && <Menu size={"40px"} />}
+            </button>
+          </div>
+          <button
+            className="flex justify-center items-center w-full"
+            onClick={toggleMenu}
+          >
             {isOpen && <X size={"40px"} />}
           </button>
         </div>

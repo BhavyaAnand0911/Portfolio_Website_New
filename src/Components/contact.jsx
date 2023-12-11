@@ -57,12 +57,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-700 w-full flex flex-col items-center leading-20 font-['montserrat']">
+    <div className="contact min-h-screen bg-slate-700 w-full flex flex-col items-center leading-20 font-['montserrat']">
       <span className="mt-10 text-white text-3xl md:text-5xl lg:text-5xl xl:text-5xl font-semibold mb-5 md:mb-10">
         CONTACT ME
       </span>
       <div style={lineStyle}></div>
-      <p className="text-white mb-10 font-medium text-lg md:text-xl lg:text-xl xl:text-xl text-center mt-5 md:mt-10">
+      <p className="text-white mb-10 font-medium text-base p-4 md:text-xl lg:text-xl xl:text-xl text-center mt-5 md:mt-10">
         Please feel free to contact me by filling out the form below. I will
         respond to you as soon as I can.
       </p>

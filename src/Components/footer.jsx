@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <>
       <div className="footer bg-black text-white h-[300px] font-['Montserrat']">
-        <div className="footerContent w-full md:w-[80%] h-full flex flex-col md:flex-row justify-between ">
-          <div className="left w-full md:w-[80%] p-6 md:p-[30px] m-6 md:m-[30px] md:ml-[500px]">
+        <div className="footerContent w-full  flex flex-col md:flex-row justify-between ">
+          <div className="left text-center md:text-left  p-3 md:p-[30px]  md:m-[30px] ">
             <span className="footerName text-2xl font-semibold">
               BHAVYA ANAND
             </span>
@@ -15,11 +15,11 @@ const Footer = () => {
               of websites and web applications.
             </p>
           </div>
-          <div className="right w-full md:w-1/2 p-6 md:p-[30px] m-6 md:m-[30px] md:ml-[180px] text-left">
-            <span className="socials text-2xl font-semibold ml-[10px]">
+          <div className="right text-center md:text-left flex flex-col justify-center items-center w-full md:w-1/2 p-6 md:p-[30px]  md:m-[30px] md:ml-[180px]">
+            <span className="socials text-2xl font-semibold ml-[10px] ">
               SOCIALS
             </span>
-            <div className="links mt-[20px] flex">
+            <div className="links  mt-[20px] ">
               <SocialIcon
                 url="https://www.instagram.com/_bhavya__anand_/"
                 bgColor="black"
